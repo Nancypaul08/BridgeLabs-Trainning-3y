@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h1>HTML Tables</h1>
+
+    <h2>Student Marks Table</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nancy Paul</td>
+                <td>Web Development</td>
+                <td>95</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Rahul Sharma</td>
+                <td>Data Structures</td>
+                <td>88</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Priya Singh</td>
+                <td>Algorithms</td>
+                <td>76</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Average</strong></td>
+                <td>86</td>
+                <td>A</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Table with Rowspan and Colspan</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th colspan="3">Academic Schedule</th>
+        </tr>
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>HTML & CSS</td>
+            <td>9:00 AM</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>11:00 AM</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Python</td>
+            <td>10:00 AM</td>
+        </tr>
+    </table>
+</body>
+</html>
