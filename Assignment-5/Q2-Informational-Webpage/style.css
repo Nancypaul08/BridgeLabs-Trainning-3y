@@ -1,0 +1,9 @@
+* { box-sizing: border-box; } body { margin: 0; font-family: Georgia, serif; color: #29211f; background: #fff8ed; } header { padding: 4rem 8%; color: white; text-align: center; background: #8c2f39; } header h1 { margin: 0; font-size: 3rem; } header p { font-size: 1.2rem; font-weight: bold; }
+nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; padding: 1rem; background: #3a2422; } nav a { color: #fff5df; text-decoration: none; font-weight: bold; }
+section { min-height: 52vh; display: flex; align-items: center; padding: 4rem 8%; border-bottom: 8px solid #fff8ed; background-size: cover; background-position: center; }
+.content { max-width: 650px; padding: 2rem; border: 2px solid #ffffff99; border-radius: 10px; background: #fffdf4e8; }.content h2 { margin-top: 0; font-size: 2rem; }.content p { line-height: 1.8; font-size: 1.1rem; }
+/* Fixed backgrounds create a simple parallax-like effect on larger screens. */
+.intro { background-image: linear-gradient(110deg, #f7b267dd, #fbd1a2bb), url('https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1600&q=80'); background-attachment: fixed; }
+.history { justify-content: flex-end; background: radial-gradient(circle, #ffe5aacc, #a23e48e8), url('https://images.unsplash.com/photo-1602301986713-3e21c3581b37?auto=format&fit=crop&w=1600&q=80'); background-attachment: fixed; }
+.places { background: #e8c07d; }.culture { justify-content: flex-end; background: #bf6a4dcc; } footer { padding: 1.5rem; text-align: center; color: white; background: #3a2422; }
+@media (max-width: 650px) { header h1 { font-size: 2.3rem; } section { min-height: auto; padding: 3rem 6%; background-attachment: scroll; }.content { padding: 1.4rem; }.content h2 { font-size: 1.7rem; } }
