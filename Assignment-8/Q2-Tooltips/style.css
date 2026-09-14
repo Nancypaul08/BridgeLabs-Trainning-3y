@@ -1,0 +1,10 @@
+/* The parent is relative; its tooltip is absolutely positioned above it. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eff6ff; color: #172554; }
+header, footer { padding: 1.4rem; text-align: center; color: white; background: #1e3a8a; }
+main { min-height: 65vh; display: flex; align-items: center; justify-content: center; }
+.tips { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; }
+.tip { position: relative; display: grid; width: 76px; height: 76px; place-items: center; border-radius: 50%; color: white; background: #2563eb; font-size: 2rem; cursor: help; }
+.tooltip { position: absolute; bottom: calc(100% + 12px); left: 50%; width: max-content; max-width: 170px; padding: .55rem .75rem; border-radius: 6px; color: white; background: #172554; font-size: .85rem; transform: translateX(-50%); opacity: 0; pointer-events: none; transition: opacity .3s ease-in-out; }
+.tooltip::after { content: ""; position: absolute; top: 100%; left: 50%; border: 6px solid transparent; border-top-color: #172554; transform: translateX(-50%); }
+.tip:hover .tooltip { opacity: 1; }

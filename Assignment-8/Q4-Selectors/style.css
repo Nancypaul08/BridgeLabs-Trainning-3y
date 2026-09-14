@@ -1,0 +1,6 @@
+/* Element selector targets all paragraphs. */ p { line-height: 1.6; }
+/* Class selector styles only the note. */ .note { padding: .6rem; color: #713f12; background: #fef3c7; }
+/* ID selector identifies one unique heading. */ #special { color: #6d28d9; }
+/* Attribute selector matches secure links. */ a[href^="https"] { color: #047857; font-weight: bold; }
+/* Combinators: > direct child, + adjacent sibling, ~ general sibling, space descendant. */ .practice > ul { padding: 1rem 2rem; background: #e0e7ff; } .practice p + .adjacent { color: #dc2626; } .adjacent ~ p { text-decoration: underline; } .practice li { margin: .35rem; }
+* { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #1e293b; } header, footer { padding: 1.4rem; text-align: center; background: #312e81; color: white; } main { min-height: 65vh; padding: 2rem; }.practice { max-width: 680px; margin: auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 6px 16px #1e293b20; }
