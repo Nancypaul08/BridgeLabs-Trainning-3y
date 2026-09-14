@@ -1,0 +1,6 @@
+/* Attribute selector: targets only text inputs. */ input[type="text"] { padding: .8rem; border: 2px solid #6c63ff; border-radius: 8px; }
+/* Attribute selector: matches links whose address starts with https. */ a[href^="https"] { color: #087f5b; font-weight: bold; }
+/* Pseudo-classes style interaction and selected list positions. */ input:focus { outline: 3px solid #ffd166; } a:hover { color: #ef476f; } li:nth-child(odd) { background: #e7f5ff; }
+/* Pseudo-elements place decorative content before and after an element. */ h2::before { content: "✦ "; color: #ef476f; } h2::after { content: " ✦"; color: #ef476f; }
+/* Combinators: > direct child, + adjacent sibling, ~ later siblings, and descendant. */ .panel > p { font-weight: bold; } .panel p + .next { color: #6c63ff; } .next ~ p { text-decoration: underline; } .panel li { padding: .4rem; }
+* { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; background: #f8f9fa; } header, footer { text-align:center; padding: 1.3rem; color: white; background: #343a40; } main { min-height: 65vh; display:grid; place-items:center; }.panel { width:min(540px,90vw); padding:2rem; background:white; box-shadow:0 8px 22px #0002; border-radius:12px; }.panel a, .panel input { display:block; margin:1rem 0; } ul { padding:0; list-style:none; }
