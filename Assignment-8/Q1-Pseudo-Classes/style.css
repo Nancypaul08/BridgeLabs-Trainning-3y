@@ -1,0 +1,13 @@
+/* Flexbox keeps each state example in a neat row. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fb; color: #1e293b; }
+header, footer { padding: 1.4rem; text-align: center; color: white; background: #334155; }
+main { min-height: 65vh; display: grid; place-items: center; padding: 2rem; }
+.examples { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+article { width: 220px; min-height: 190px; padding: 1.25rem; background: white; border-radius: 12px; box-shadow: 0 5px 14px #0f172a20; }
+a, button, input { display: block; width: 100%; padding: .7rem; border-radius: 7px; font: inherit; }
+a { background: #dbeafe; color: #1d4ed8; text-align: center; text-decoration: none; }
+button { border: 0; color: white; background: #0f766e; cursor: pointer; }
+input { border: 2px solid #94a3b8; }
+/* State changes make each pseudo-class visible. */
+a:hover { background: #2563eb; color: white; } input:focus { outline: 3px solid #f59e0b; border-color: #f59e0b; } button:active { background: #115e59; transform: scale(.96); } li:nth-child(2) { color: white; background: #8b5cf6; }

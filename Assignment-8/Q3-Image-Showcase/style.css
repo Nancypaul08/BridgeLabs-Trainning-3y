@@ -1,0 +1,11 @@
+/* A grid creates six equal image cards and becomes one column on mobile. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #fff; background: #111827; }
+header, footer { padding: 1.4rem; text-align: center; background: #0f172a; }
+main { padding: 2rem; }.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; max-width: 1000px; margin: auto; }
+figure { position: relative; overflow: hidden; margin: 0; border-radius: 14px; box-shadow: 0 8px 18px #0008; }
+figure::after { content: ""; position: absolute; inset: 0; background: #0007; opacity: 0; transition: opacity .3s ease; }
+img { display: block; width: 100%; height: 190px; object-fit: cover; transition: transform .3s ease; }
+figcaption { position: absolute; z-index: 1; bottom: 0; width: 100%; padding: .8rem; background: #0009; }
+figure:hover img { transform: scale(1.1); } figure:hover::after { opacity: 1; }
+@media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } img { height: 240px; } }
