@@ -1,0 +1,79 @@
+/* Q10: Grid dashboard with a responsive sidebar. */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #edf2f8;
+}
+
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+header {
+  grid-area: header;
+  padding: 1.4rem 5%;
+  color: #fff;
+  background: #202d4a;
+}
+
+header h1, header p { margin: 0; }
+header p { margin-top: .35rem; color: #c9d8ff; }
+
+aside {
+  grid-area: sidebar;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 2px 0 12px #17203312;
+}
+
+aside h2 { margin-top: 0; }
+nav { display: grid; gap: .65rem; }
+nav a, .cards a { color: #315bc0; font-weight: bold; text-decoration: none; }
+nav a { padding: .7rem; border-radius: 7px; }
+nav a:hover { color: #fff; background: #315bc0; }
+
+main { grid-area: main; padding: 2rem; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+
+.cards article {
+  min-height: 180px;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 13px #17203316;
+  animation: load .55s ease both;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cards article:nth-child(2) { animation-delay: .1s; }
+.cards article:nth-child(3) { animation-delay: .2s; }
+.cards article:nth-child(4) { animation-delay: .3s; }
+.cards article:hover { transform: scale(1.03); box-shadow: 0 12px 25px #1720332b; }
+.cards h2 { margin-top: 0; }
+code { padding: .2rem .35rem; color: #3f3292; background: #eceaff; }
+
+@keyframes load {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 749px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "header" "sidebar" "main";
+  }
+  aside { box-shadow: 0 2px 10px #17203312; }
+  nav { grid-template-columns: repeat(2, 1fr); }
+  main { padding: 1.25rem; }
+  .cards { grid-template-columns: 1fr; }
+}
