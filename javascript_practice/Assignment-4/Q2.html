@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Student Registration Validator</title>
+<style>body{font:16px system-ui;max-width:520px;margin:40px auto;padding:0 18px}label{display:block;margin-top:12px}input{box-sizing:border-box;width:100%;padding:9px;border:2px solid #aaa;border-radius:5px}.valid{border-color:#218838}.invalid{border-color:#d22}.error{color:#c22}button{margin-top:16px;padding:9px 16px}</style></head><body>
+<h1>Student Registration</h1><form id="registration-form">
+<label>Name <input name="name" autocomplete="name" required></label><small class="error" id="name-error"></small>
+<label>Email <input name="email" type="email" autocomplete="email" required></label><small class="error" id="email-error"></small>
+<label>Phone (10 digits) <input name="phone" type="tel" inputmode="numeric" required></label><small class="error" id="phone-error"></small>
+<label>Password <input name="password" type="password" required></label><small class="error" id="password-error"></small><br><button>Register</button></form><p id="registration-result" aria-live="polite"></p>
+<script src="Q2.js"></script></body></html>
